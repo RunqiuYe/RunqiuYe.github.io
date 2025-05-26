@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Finish setting up the blog section!
+Finish setting up the blog and repositories section!

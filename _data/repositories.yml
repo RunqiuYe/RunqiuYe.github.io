@@ -3,11 +3,12 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
-  - runqiuye/COSMIC
-  - runqiuye/METISSE
   - runqiuye/mathematics-notes
   - runqiuye/machine-learning-notes
   - runqiuye/stanford-cs229
   - runqiuye/stanford-cs224n
+  - runqiuye/COSMIC
+  - runqiuye/METISSE
+  - runqiuye/post-MT-binaries
   - runqiuye/text-editor
 

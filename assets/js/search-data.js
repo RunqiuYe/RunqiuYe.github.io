@@ -45,7 +45,7 @@ ninja.data = [{
         
           title: "Counting numbers",
         
-        description: "An number counting dynamic programming problem",
+        description: "A number counting dynamic programming problem",
         section: "Posts",
         handler: () => {
           

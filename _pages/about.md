@@ -31,7 +31,8 @@ side, and analysis on the mathematics side. I am also interested in Physics.
 
 I like to self-study during my free time. For both courses I took 
 in Carnegie Mellon University and materials I self-studied, you can find 
-my notes under the projects section and my reflections and reviews under the 
+my notes under the repositories 
+section and my reflections and reviews under the 
 blog section with the review tag. I will also post my personal random thoughts 
 under the blog section with the thoughts tag.
 

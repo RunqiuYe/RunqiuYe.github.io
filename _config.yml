@@ -7,8 +7,7 @@ first_name: Runqiu
 middle_name: 
 last_name: Ye
 contact_note: 
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+description: 
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -148,8 +147,8 @@ collections:
     defaults:
       layout: post
     output: true
-  projects:
-    output: true
+  # projects:
+  #   output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -195,6 +194,8 @@ exclude:
   - _pages/teaching.md
   - _pages/dropdown.md
   - _pages/profiles.md
+  - _projects/
+  - _pages/projects.md
 keep_files:
   - CNAME
   - .nojekyll

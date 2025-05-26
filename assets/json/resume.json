@@ -19,40 +19,40 @@
       "url": "https://www.cmu.edu/",
       "area": "Computer Science, Mathematics",
       "studyType": "Bachelor of Science",
-      "startDate": "08/2023",
-      "endDate": "05/2027"
+      "startDate": "2023/08",
+      "endDate": "2027/05"
     }
   ],
   "work": [
     {
       "name": "Amazon Web Services (AWS)",
       "position": "Software Developer Intern",
-      "startDate": "05/2025",
-      "endDate": "08/2025",
+      "startDate": "2025/05",
+      "endDate": "2025/08",
       "location": "Seattle WA",
       "summary": "Software developer intern at AWS Bedrock."
     },
     {
       "name": "Carnegie Mellon University",
       "position": "Undergraduate Research Assisstant",
-      "startDate": "09/2024",
-      "endDate": "01/2025",
+      "startDate": "2024/09",
+      "endDate": "2025/01",
       "location": "Pittsburgh, PA",
       "summary": "Researched on wearable exoskeleton for human automation in Professor Inseung Kang's MetaMobility lab."
     },
     {
       "name": "Carnegie Mellon University",
       "position": "Undergraduate Research Assisstant",
-      "startDate": "01/2024",
-      "endDate": "08/2024",
+      "startDate": "2024/01",
+      "endDate": "2024/08",
       "location": "Pittsburgh, PA",
       "summary": "Researched on wide post-mass transfer binary star systems in Professor Katelyn Breivik's COSMIC lab."
     },
     {
       "name": "Carnegie Mellon University",
       "position": "Teaching Assisstant",
-      "startDate": "08/2024",
-      "endDate": "08/2025",
+      "startDate": "2024/08",
+      "endDate": "2025/08",
       "location": "Pittsburgh, PA",
       "summary": "Teaching assisstant for 21259, Calculus in 3D. Teaching assisstant for 21269, Vector Analysis, an honor mathematical analysis course."
     }

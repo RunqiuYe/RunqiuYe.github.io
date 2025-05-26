@@ -30,11 +30,22 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-counting-numbers",
+        },{id: "post-setting-up-this-website",
+        
+          title: "Setting up this website",
+        
+        description: "Difficulties and solutions for setting up this website",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/setup/";
+          
+        },
+      },{id: "post-counting-numbers",
         
           title: "Counting numbers",
         
-        description: "An number counting dynamic programming problem.",
+        description: "An number counting dynamic programming problem",
         section: "Posts",
         handler: () => {
           
@@ -49,8 +60,8 @@ ninja.data = [{
             },},{id: "news-start-building-this-website",
           title: 'Start building this website!',
           description: "",
-          section: "News",},{id: "news-finish-setting-up-the-blog-section",
-          title: 'Finish setting up the blog section!',
+          section: "News",},{id: "news-finish-setting-up-the-blog-and-repositories-section",
+          title: 'Finish setting up the blog and repositories section!',
           description: "",
           section: "News",},{
         id: 'social-email',

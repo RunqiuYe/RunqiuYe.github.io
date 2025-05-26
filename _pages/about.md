@@ -11,7 +11,7 @@ profile:
   more_info: 
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
@@ -24,9 +24,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 I am Runqiu Ye (also known as Ray or 叶润秋), 
-undergraduate student at Carnegie Mellon University. I plan to 
-graduate in Spring 2027, and I study Computer Science and Mathematics. In 
-particular, I am most interested in machine learning on the computer science 
+undergraduate student at Carnegie Mellon University graduating in Spring 2027. 
+I study Computer Science and Mathematics. 
+I am especially interested in machine learning on the computer science 
 side, and analysis on the mathematics side. I am also interested in Physics.
 
 I like to self-study during my free time. You can

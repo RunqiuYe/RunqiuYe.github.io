@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-setting-up-this-website",
+        },{id: "post-two-weeks-of-summer-summary-and-reflection",
+        
+          title: "Two weeks of summer --- summary and reflection",
+        
+        description: "Thoughts and reflection on my first two weeks of summer --- internship, self-study, etc.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/summary/";
+          
+        },
+      },{id: "post-setting-up-this-website",
         
           title: "Setting up this website",
         

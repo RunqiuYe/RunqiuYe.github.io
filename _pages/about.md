@@ -46,5 +46,4 @@ enjoy watching and playing sports, especially soccer, baseball, and basketball.
 I am most notably known as an Arsenal fan. 
 I also like classical music and I enjoy cooking. 
 
-This website is still in the building process.
 

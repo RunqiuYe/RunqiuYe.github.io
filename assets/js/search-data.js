@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-two-weeks-of-summer-summary-and-reflection",
+        },{id: "post-course-review-cmu-15210",
+        
+          title: "Course review --- CMU 15210",
+        
+        description: "Course review and reflection on CMU 15210, parallel and sequential data structures and algorithms",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/15210-review/";
+          
+        },
+      },{id: "post-two-weeks-of-summer-summary-and-reflection",
         
           title: "Two weeks of summer --- summary and reflection",
         

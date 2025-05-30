@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-course-review-cmu-15210",
+        },{id: "post-course-review-cmu-10701",
+        
+          title: "Course review --- CMU 10701",
+        
+        description: "Course review and reflection on CMU 10701, introduction to machine learning (PhD)",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/10701-review/";
+          
+        },
+      },{id: "post-course-review-cmu-15210",
         
           title: "Course review --- CMU 15210",
         

@@ -91,6 +91,9 @@ ninja.data = [{
           section: "News",},{id: "news-finish-setting-up-the-blog-and-repositories-section",
           title: 'Finish setting up the blog and repositories section!',
           description: "",
+          section: "News",},{id: "news-add-course-review-for-cmu-15210-10701-started-studying-folland-real-analysis",
+          title: 'Add course review for CMU 15210, 10701. Started studying Folland real analysis.',
+          description: "",
           section: "News",},{
       id: 'light-theme',
       title: 'Change theme to light',

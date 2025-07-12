@@ -121,7 +121,7 @@ is decreasing against $i$.
     </div>
 </div>
 <div class="caption">
-    Illustration of monotonicity of $T(n, k)$.
+    Illustration of monotonicity of Method 1.
 </div>
 
 Now it is clear that the min is achieved when $T(i, k - 1) = T(n - i, k)$.
@@ -163,7 +163,114 @@ class Solution:
 ```
 
 For bottom-up DP we can just deal with $k$ from small to large, and $n$
-from small to large iteratively. The code is omitted here.
+from small to large iteratively. Also note that when we are dealing 
+with $k$, the update only depend on $k - 1$, 
+we can compress the space needed to $O(N)$ only. 
+The code is omitted.
 
 ## Method 2
+For method 2, we also calculate $T(n, k)$ for each $n$ and $k$. However,
+now consider another quantity:
 
+$$
+i^* = \operatorname*{argmin}_{1 \leq i \leq n - 1} \max 
+\left\{ T(i, k - 1), T(n - i, k) \right\}.
+$$
+
+That is, the optimal $i$ where we reached this min. We find this value 
+of $i$ using binary search in method 1, but we can utilize monotonicy again
+to speed things up. Look at the diagram again.
+
+<div class="row mt-1">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/super-egg-drop-2.png" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Illustration of monotonicity of Method 2.
+</div>
+
+When we fix $k$ and increase $n$ (moving the orange line to the green
+line), because $T(n - i, k)$ is increasing
+but $T(i, k - 1)$ is fixed, the optimal $i$ is increasing. Now we can 
+use this fact to calculate all the $T(n, k)$ in $O(NK)$ time. We just 
+need to keep track the current optimal $i$. Note that because we need to 
+fix $k$ to use this property so $k$ needs to be in the outer loop. 
+Refer to the code below:
+```c++
+class Solution {
+public:
+    const static int N = 1e4 + 5;
+    const static int K = 100 + 5;
+    int f[N][K];
+
+    int superEggDrop(int k, int n) {
+        for (int i = 1; i <= n + 1; i++) {
+            f[i][1] = i - 1;
+        }
+        for (int j = 2; j <= k; j++) {
+            f[1][j] = 0;
+            int opt = 1;
+            for (int i = 2; i <= n + 1; i++) {
+                while (opt < i - 1 && f[opt][j - 1] < f[i - opt][j]) {
+                    opt++;
+                }
+                f[i][j] = 1 + max(f[opt][j - 1], f[i - opt][j]);
+                if (opt != 1) {
+                    f[i][j] =
+                        min(f[i][j], 1 + max(f[opt - 1][j - 1], f[i - opt + 1][j]));
+                }
+            }
+        }
+        return f[n + 1][k];
+    }
+};
+```
+Again, because when we are dealing with $k$, 
+the update only depend on $k - 1$, 
+we can compress the space needed to $O(N)$ only. The code is 
+omitted.
+
+## Method 3
+For our final method, we think about the problem from another perspective.
+Instead of trying to figure out the minimum moves needed to determine $f$,
+consider that given some number of moves $t$ and some number of eggs
+$k$, what is the maximum size of search space $n$ we can handle.
+Call this function $g(t, k)$.
+Under this setting, we just need to find the smallest $t$ such that 
+$g(t, k) \geq n + 1$. 
+
+In this setting, we similarly have a recurrence relation:
+
+$$
+g(t, k) = g(t - 1, k - 1) + g(t - 1, k).
+$$
+
+Why is this the case? When we use a move to drop an egg, we can handle
+$g(t - 1, k - 1)$ floors below if it breaks, and $g(t - 1, k)$ above 
+(including the current floor, same reason as before) if it does not
+break. For our initial condition, we have $g(1, k) = 2$
+and $g(t, 1) = t + 1$.
+
+Surprisingly, recall that 
+
+$$
+\binom{t + 1}{k} = \binom{t}{k - 1} + \binom{t}{k},
+$$
+
+we then actually have 
+
+$$
+g(t, k) = \binom{t + 1}{k}.
+$$
+
+We can restrict ourself to only $t \geq k$ here, because 
+reasonably we have 
+$g(t, k) = g(t, t)$ when $k \leq t$. We can then binary search for 
+the answer. This is $O(K \log N)$ time, because we need at most 
+$O(N)$ moves for a search space of size $N$, and for each fixed 
+$t$ we can calculate $\binom{t + 1}{k}$ for $1 \leq k \leq K$ using 
+
+$$
+\binom{t + 1}{k} \cdot \frac{k}{t - k + 1} = \binom{t + 1}{k + 1}.
+$$

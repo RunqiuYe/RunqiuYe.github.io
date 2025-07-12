@@ -132,8 +132,8 @@ and $\max \{ T(i - 1, k - 1), T(n + 1 - i, k) \}$. Of course make
 sure the index is within range. 
 
 Using binary search, we have lower the cost for each node from $O(N)$ to 
-$O(\log N)$. The total time is then $O(N K \log N)$. This is already enough 
-to pass this problem.
+$O(\log N)$. The total time is then $O(N K \log N)$. Total space needed
+is $O(N K)$. This is already enough to pass this problem.
 
 For simplicity we can just use Python and memoization DP. The code is as 
 below:

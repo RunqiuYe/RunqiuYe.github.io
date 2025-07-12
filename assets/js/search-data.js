@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-course-review-cmu-10701",
+        },{id: "post-super-egg-drop",
+        
+          title: "Super Egg Drop",
+        
+        description: "An algorithm problem I find interesting and inspiring",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/super-egg-drop/";
+          
+        },
+      },{id: "post-course-review-cmu-10701",
         
           title: "Course review --- CMU 10701",
         
